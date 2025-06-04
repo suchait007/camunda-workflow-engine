@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: workflow-engine
+  datasource:
+    url: jdbc:postgresql://localhost:5432/camunda_db?currentSchema=camunda_records
+    username: postgres
+    password: test123
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,prometheus

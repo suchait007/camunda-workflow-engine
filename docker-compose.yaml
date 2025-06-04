@@ -1,0 +1,24 @@
+version: '3.8'
+
+services:
+
+  postgres:
+    image: postgres:16.2
+    ports:
+      - 5432:5432
+    volumes:
+      - postgres_data_camunda:/var/lib/postgresql/data
+    environment:
+      POSTGRES_DB: agentverify_io_db
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: test123
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
+
+volumes:
+  postgres_data_camunda:
+    driver: local

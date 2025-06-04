@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 2,
+  "components": [
+    {
+      "text": "Start Day",
+      "type": "text",
+      "id": "Field_1nrtj5o"
+    },
+    {
+      "label": "Enter Start Day",
+      "type": "textfield",
+      "id": "Field_0qdpbvn",
+      "key": "startDay",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "text": "End Day",
+      "type": "text",
+      "id": "Field_1dbr8k2"
+    },
+    {
+      "label": "Enter End Day",
+      "type": "textfield",
+      "id": "Field_1kumdle",
+      "key": "endDay",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "values": [
+        {
+          "value": "Casual Leave",
+          "label": "Casual Leave"
+        },
+        {
+          "label": "Planned Leave",
+          "value": "Planned Leave"
+        }
+      ],
+      "label": "Leave Type",
+      "type": "select",
+      "id": "Field_17nk4ji",
+      "key": "leaveType",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "action": "submit",
+      "label": "Submit Leave",
+      "type": "button",
+      "id": "Field_1yx4as7",
+      "key": "field_0hkit0x"
+    }
+  ],
+  "type": "default",
+  "id": "leaveApplyForm"
+}

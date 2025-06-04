@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" id="credit_rule_check_id" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.30.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.22.0">
+  <decision id="Decision_1va78r6" name="Credit Check Rules" camunda:historyTimeToLive="180">
+    <decisionTable id="DecisionTable_0kyq0zm">
+      <input id="Input_1" label="age">
+        <inputExpression id="InputExpression_1" typeRef="string">
+          <text>age</text>
+        </inputExpression>
+      </input>
+      <output id="Output_1" label="result" name="result" typeRef="string" />
+      <rule id="DecisionRule_0i4cdb6">
+        <inputEntry id="UnaryTests_0vuynyw">
+          <text> &gt; 30</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1hz3mnk">
+          <text>success</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0awfa94">
+        <inputEntry id="UnaryTests_1rb98t5">
+          <text> &lt; 30</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0ltc0sy">
+          <text>fail</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram>
+      <dmndi:DMNShape dmnElementRef="Decision_1va78r6">
+        <dc:Bounds height="80" width="180" x="160" y="100" />
+      </dmndi:DMNShape>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</definitions>

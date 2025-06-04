@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" id="Definitions_0v723ox" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.30.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.22.0">
+  <decision id="auto_approval_business_rules" name="Auto Approval Business Rules" camunda:historyTimeToLive="180">
+    <decisionTable id="DecisionTable_0gmvq5w">
+      <input id="Input_1" label="Total days">
+        <inputExpression id="InputExpression_1" typeRef="integer">
+          <text>totalLeaveDays</text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_17xs26a" label="Team Name">
+        <inputExpression id="LiteralExpression_1iwt92b" typeRef="string">
+          <text>teamName</text>
+        </inputExpression>
+      </input>
+      <output id="Output_1" label="Results" name="approvalResult" typeRef="string" />
+      <rule id="DecisionRule_0t3112k">
+        <inputEntry id="UnaryTests_1qpahiu">
+          <text>&lt;=2</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1a9966r">
+          <text>"team1"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0otd1wt">
+          <text>"yes"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_10pfy2w">
+        <inputEntry id="UnaryTests_1pylyrp">
+          <text>&lt;=2</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1j96mju">
+          <text>"team2"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_10e2p9b">
+          <text>"yes"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0htsi6i">
+        <inputEntry id="UnaryTests_09xuk89">
+          <text>&lt;=2</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1c0rj02">
+          <text>"team3"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0fviigw">
+          <text>"no"</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram>
+      <dmndi:DMNShape dmnElementRef="auto_approval_business_rules">
+        <dc:Bounds height="80" width="180" x="160" y="100" />
+      </dmndi:DMNShape>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</definitions>
