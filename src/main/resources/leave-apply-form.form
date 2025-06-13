@@ -1,5 +1,4 @@
 {
-  "schemaVersion": 2,
   "components": [
     {
       "text": "Start Day",
@@ -30,6 +29,7 @@
       }
     },
     {
+      "label": "Leave Type",
       "values": [
         {
           "value": "Casual Leave",
@@ -38,9 +38,12 @@
         {
           "label": "Planned Leave",
           "value": "Planned Leave"
+        },
+        {
+          "label": "Medical Leave",
+          "value": "medical"
         }
       ],
-      "label": "Leave Type",
       "type": "select",
       "id": "Field_17nk4ji",
       "key": "leaveType",
@@ -49,13 +52,18 @@
       }
     },
     {
-      "action": "submit",
       "label": "Submit Leave",
+      "action": "submit",
       "type": "button",
       "id": "Field_1yx4as7",
       "key": "field_0hkit0x"
     }
   ],
+  "schemaVersion": 17,
   "type": "default",
-  "id": "leaveApplyForm"
+  "id": "leaveApplyForm",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.30.0"
+  }
 }

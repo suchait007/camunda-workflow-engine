@@ -5,3 +5,6 @@ spring:
 camunda.bpm.admin-user:
   id: admin
   password: admin
+
+server:
+  port: 9090
